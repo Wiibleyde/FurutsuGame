@@ -10,7 +10,6 @@ public class DropFruit : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            print(fruitsPrefabs);
             GameObject nextFruit = Instantiate(fruitsPrefabs[random.Range(0, 5)]);
             nextFruit.transform.position = transform.position;
         }

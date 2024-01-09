@@ -7,7 +7,7 @@ public class FruitCollision : MonoBehaviour
     [HideInInspector] public DropFruit DropFruit;
     public int FruitIndex;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+	private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Fruit"))
         {
@@ -16,8 +16,8 @@ public class FruitCollision : MonoBehaviour
             if (collidedFruit.FruitIndex == FruitIndex)
             {
                 Debug.Log("Correct fruit");
-
-                GameObject nextFruit = Instantiate(DropFruit.fruitsPrefabs[FruitIndex++]);
+				
+                GameObject nextFruit = Instantiate(DropFruit.fruitsPrefabs[FruitIndex+1], transform.position, Quaternion.identity);
                 nextFruit.transform.position = transform.position;
                 Destroy(collidedFruit.gameObject);
                 Destroy(gameObject);
@@ -25,4 +25,13 @@ public class FruitCollision : MonoBehaviour
             }
         }
     }
+
+	private void Awake()
+	{
+    	DropFruit = GetComponent<DropFruit>();
+    	if (DropFruit == null)
+    	{
+        	Debug.LogError("Le composant DropFruit n'a pas été trouvé sur le même GameObject ou ses enfants.");
+    	}
+	}
 }
