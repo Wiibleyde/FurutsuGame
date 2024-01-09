@@ -21,8 +21,6 @@ public class DropFruit : MonoBehaviour
             Debug.Log("Fruit position: " + fruitPosition);
             // Create a new fruit randomly from the name of the prefab ("Cherry""Strawberry""Grape""Persimmons""Orange") 
             fruit = Instantiate(Resources.Load(possibility[Random.Range(0, possibility.Length)]) as GameObject, fruitPosition, Quaternion.identity);
-            // Add a force to the fruit
-            fruit.GetComponent<Rigidbody>().AddForce(Vector3.up * 100);
         }
     }
 }
