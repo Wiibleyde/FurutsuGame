@@ -4,17 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Cherry
+  - Fruit
   - Apple
+  - Cherry
   - Grape
-  - Orange
+  - Melon
   - Peach
   - Pear
   - Persimmons
   - Pineapple
   - Strawberry
   - Watermelon
-  - Melon
   layers:
   - Default
   - TransparentFX

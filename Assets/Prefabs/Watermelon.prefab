@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4154635950000001485}
   - component: {fileID: 4429945515994125315}
   - component: {fileID: 3432119703992415663}
+  - component: {fileID: -6049538596169086571}
   m_Layer: 0
   m_Name: Watermelon
-  m_TagString: Watermelon
+  m_TagString: Cherry
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,3 +149,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-6049538596169086571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005529338559919941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df5583ce91059f64d8b126f55f7fc9f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DropFruit: {fileID: 0}
+  FruitIndex: 10
