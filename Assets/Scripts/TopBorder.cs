@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TopBorder : MonoBehaviour
 {
@@ -14,7 +15,9 @@ public class TopBorder : MonoBehaviour
             if (fruitdrop.hasbeendroped)
             {
                 Debug.Log("Game Over");
-                Destroy(collision.gameObject);
+                // Reset the game
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                
             }
         }
     }
