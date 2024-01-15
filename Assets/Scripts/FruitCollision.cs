@@ -7,6 +7,7 @@ public class FruitCollision : MonoBehaviour
     [HideInInspector] public DropFruit DropFruit;
     public int FruitIndex;
     public bool hasbeendroped = false;
+    public int ScoreValue;
 
     void Start()
     {
@@ -37,17 +38,55 @@ public class FruitCollision : MonoBehaviour
                     Debug.LogError("DropFruit is null");
                     return;
                 }
-
-                if (DropFruit.fruitsPrefabs == null || DropFruit.fruitsPrefabs.Length <= FruitIndex)
+                if (FruitIndex < 11)
                 {
-                    Debug.LogError("fruitsPrefabs is null or does not contain an element at index " + FruitIndex);
-                    return;
+                    GameObject nextFruit = Instantiate(DropFruit.fruitsPrefabs[FruitIndex]);
+                    nextFruit.transform.position = transform.position;
+                    Destroy(collidedFruit.gameObject);
+                    Destroy(gameObject);
                 }
-
-                GameObject nextFruit = Instantiate(DropFruit.fruitsPrefabs[FruitIndex]);
-                nextFruit.transform.position = transform.position;
-                Destroy(collidedFruit.gameObject);
-                Destroy(gameObject);
+                else
+                {
+                    Destroy(collidedFruit.gameObject);
+                    Destroy(gameObject);
+                }
+                
+                switch (FruitIndex)
+                {
+                    case 1:
+                        ScoreValue = ScoreValue + 1;
+                        break;
+                    case 2:
+                        ScoreValue = ScoreValue + 3;
+                        break;
+                    case 3:
+                        ScoreValue = ScoreValue + 6;
+                        break;
+                    case 4:
+                        ScoreValue = ScoreValue + 10;
+                        break;
+                    case 5:
+                        ScoreValue = ScoreValue + 15;
+                        break;
+                    case 6:
+                        ScoreValue = ScoreValue + 21;
+                        break;
+                    case 7:
+                        ScoreValue = ScoreValue + 28;
+                        break;
+                    case 8:
+                        ScoreValue = ScoreValue + 36;
+                        break;
+                    case 9:
+                        ScoreValue = ScoreValue + 45;
+                        break;
+                    case 10:
+                        ScoreValue = ScoreValue + 55;
+                        break;
+                    case 11:
+                        ScoreValue = ScoreValue + 66;
+                        break;
+                }
             }
         }
     }
