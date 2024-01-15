@@ -6,6 +6,7 @@ public class FruitCollision : MonoBehaviour
 {
     [HideInInspector] public DropFruit DropFruit;
     public int FruitIndex;
+    public bool hasbeendroped = false;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class FruitCollision : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
     {
+        hasbeendroped = true;
         if (collision.gameObject.CompareTag("Fruit"))
         {
             FruitCollision collidedFruit = collision.gameObject.GetComponent<FruitCollision>();
