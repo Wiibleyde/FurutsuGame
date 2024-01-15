@@ -15,6 +15,7 @@ TagManager:
   - Pineapple
   - Strawberry
   - Watermelon
+  - Score
   layers:
   - Default
   - TransparentFX

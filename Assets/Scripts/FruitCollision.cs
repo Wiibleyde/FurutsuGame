@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class FruitCollision : MonoBehaviour
 {
     [HideInInspector] public DropFruit DropFruit;
@@ -54,37 +55,48 @@ public class FruitCollision : MonoBehaviour
                 switch (FruitIndex)
                 {
                     case 1:
-                        ScoreValue = ScoreValue + 1;
+                        GameObject.Find("ScoreText").GetComponent<ScoreManager>().UpdateScore(1);
+                        // ScoreValue = ScoreValue + 1;
                         break;
                     case 2:
-                        ScoreValue = ScoreValue + 3;
+                        GameObject.Find("ScoreText").GetComponent<ScoreManager>().UpdateScore(3);
+                        // ScoreValue = ScoreValue + 3;
                         break;
                     case 3:
-                        ScoreValue = ScoreValue + 6;
+                        GameObject.Find("ScoreText").GetComponent<ScoreManager>().UpdateScore(6);
+                        // ScoreValue = ScoreValue + 6;
                         break;
                     case 4:
-                        ScoreValue = ScoreValue + 10;
+                        GameObject.Find("ScoreText").GetComponent<ScoreManager>().UpdateScore(10);
+                        // ScoreValue = ScoreValue + 10;
                         break;
                     case 5:
-                        ScoreValue = ScoreValue + 15;
+                        GameObject.Find("ScoreText").GetComponent<ScoreManager>().UpdateScore(15);
+                        // ScoreValue = ScoreValue + 15;
                         break;
                     case 6:
-                        ScoreValue = ScoreValue + 21;
+                        GameObject.Find("ScoreText").GetComponent<ScoreManager>().UpdateScore(21);
+                        // ScoreValue = ScoreValue + 21;
                         break;
                     case 7:
-                        ScoreValue = ScoreValue + 28;
+                        GameObject.Find("ScoreText").GetComponent<ScoreManager>().UpdateScore(28);
+                        // ScoreValue = ScoreValue + 28;
                         break;
                     case 8:
-                        ScoreValue = ScoreValue + 36;
+                        GameObject.Find("ScoreText").GetComponent<ScoreManager>().UpdateScore(36);
+                        // ScoreValue = ScoreValue + 36;
                         break;
                     case 9:
-                        ScoreValue = ScoreValue + 45;
+                        GameObject.Find("ScoreText").GetComponent<ScoreManager>().UpdateScore(45);
+                        // ScoreValue = ScoreValue + 45;
                         break;
                     case 10:
-                        ScoreValue = ScoreValue + 55;
+                        GameObject.Find("ScoreText").GetComponent<ScoreManager>().UpdateScore(55);
+                        // ScoreValue = ScoreValue + 55;
                         break;
                     case 11:
-                        ScoreValue = ScoreValue + 66;
+                        GameObject.Find("ScoreText").GetComponent<ScoreManager>().UpdateScore(66);
+                        // ScoreValue = ScoreValue + 66;
                         break;
                 }
             }
