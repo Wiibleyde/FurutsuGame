@@ -6,7 +6,7 @@ using random = UnityEngine.Random;
 public class DropFruit : MonoBehaviour
 {
     [SerializeField] public GameObject[] fruitsPrefabs;
-    [SerializeField] public GameObject player; // Ajoutez cette ligne
+    [SerializeField] public GameObject player;
     private GameObject nextFruit;
     bool isCooldown = false;  
 
@@ -29,7 +29,6 @@ public class DropFruit : MonoBehaviour
     {
         nextFruit = Instantiate(fruitsPrefabs[random.Range(0, 5)]);
         nextFruit.transform.position = transform.position;
-        // Make the fruit shown in the UI follow the player but not collide with it
         nextFruit.GetComponent<Rigidbody2D>().isKinematic = true;
         nextFruit.GetComponent<Rigidbody2D>().simulated = false;
         nextFruit.GetComponent<Collider2D>().enabled = false;
@@ -48,7 +47,6 @@ public class DropFruit : MonoBehaviour
         nextFruit.transform.SetParent(null);
     }
 
-	// Coroutine to cooldown the player
     IEnumerator Cooldown()
     {
         isCooldown = true;
