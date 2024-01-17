@@ -16,7 +16,7 @@ public class TopBorder : MonoBehaviour
             {
                 Debug.Log("Game Over");
                 // Reset the game
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                SceneManager.LoadScene(0);
                 
             }
         }
